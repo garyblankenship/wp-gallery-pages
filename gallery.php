@@ -40,8 +40,8 @@ function wp_gallery_pages( $post ) {
 	}
 
 	//* get options value
-	$options  = get_option( 'gallery_pages', 12 );
-	$per_page = $options['per_page'];
+	$options  = get_option( 'gallery_pages' );
+	$per_page = isset($options['per_page']) ? intval($options['per_page']) : 12;
 
 	//* get the attachments ids
 	$options = array(
