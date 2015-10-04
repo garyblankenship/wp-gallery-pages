@@ -39,8 +39,8 @@ function wp_gallery_pages( $post ) {
 		return $post;
 	}
 
-	//* @todo move this to an options page
-	$options  = get_option( 'gallery_pages' );
+	//* get options value
+	$options  = get_option( 'gallery_pages', 12 );
 	$per_page = $options['per_page'];
 
 	//* get the attachments ids
